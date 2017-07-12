@@ -49,7 +49,10 @@ MyGame.Boot.prototype = {
         this.load.crossOrigin = "anonymous";
 
         // 星を読み込み
+        this.load.spritesheet("dude", "/images/dude.png",32,48);
+        this.load.spritesheet("teki", "/images/baddie.png",32,32);
         this.load.image("star", "/images/star.png");
+
 
         // ファイルの読み込みが完了した時のコールバックを設定
         this.load.onFileComplete.add(this.fileLoaded, this);
